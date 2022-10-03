@@ -14,9 +14,6 @@ https://raw.githubusercontent.com/ssdeepak/shared/master/images/Free-Pack/Multic
 https://raw.githubusercontent.com/ssdeepak/shared/master/images/animals/bear.png
 
 
-https://raw.githubusercontent.com/ssdeepak/shared/master/core/dist/ionic/ionic.esm.js
-
-
-https://raw.githubusercontent.com/ssdeepak/shared/master/core/dist/ionic/ionic.js
-
-https://raw.githubusercontent.com/ssdeepak/shared/master/core/css/ionic.bundle.css
+https://raw.githubusercontent.com/ssdeepak/shared/master/ionic/core/dist/ionic/ionic.esm.js 
+https://raw.githubusercontent.com/ssdeepak/shared/master/ionic/core/dist/ionic/ionic.js 
+https://raw.githubusercontent.com/ssdeepak/shared/master/ionic/core/css/ionic.bundle.css
