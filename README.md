@@ -11,3 +11,5 @@ https://raw.githubusercontent.com/ssdeepak/shared/master/images/freepack/Multico
 https://raw.githubusercontent.com/ssdeepak/shared/master/images/animals/bear.png
 
 https://raw.githubusercontent.com/ssdeepak/shared/master/images/2.jpeg
+
+https://raw.githubusercontent.com/ssdeepak/shared/master/data/CareManager.json
