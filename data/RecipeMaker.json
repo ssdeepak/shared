@@ -1,0 +1,2315 @@
+{
+    "projectName": "RecipeMaker",
+    "categoryType": "Other",
+    "projectDescription": "store your recipe and ingredients",
+    "tables": [
+        {
+            "tableName": "Recipe",
+            "plural": "Recipes",
+            "tableDescription": "",
+            "columns": [
+                {
+                    "columnName": "RecipeId",
+                    "essential": true,
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "description": "Recipe Identity Key",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "446762e8-abc1-495e-9b3b-9371f8162704"
+                },
+                {
+                    "columnName": "Title",
+                    "essential": true,
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "description": "",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "405dca34-37e4-45e8-994c-659aa7196111"
+                },
+                {
+                    "columnName": "Servings",
+                    "essential": true,
+                    "columnType": "IntegerType",
+                    "typeName": "",
+                    "description": "",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 1,
+                        "maxLength": 10,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "993b52e4-f58d-4b8a-bc45-3d11ca5545a3"
+                },
+                {
+                    "columnName": "CookTime",
+                    "essential": true,
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "description": "",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 1,
+                        "maxLength": 50,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "c8453708-c6a8-4d7e-afc0-e4971cdf03f6"
+                },
+                {
+                    "columnName": "Image",
+                    "essential": false,
+                    "columnType": "ByteArray",
+                    "typeName": "",
+                    "description": "Ingredient Image if any",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "a1022bfd-0574-4d94-8db5-f0b33e5bd9cf"
+                },
+                {
+                    "columnName": "RecipeType",
+                    "essential": true,
+                    "columnType": "EnumType",
+                    "typeName": "RecipeType",
+                    "description": "",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [
+                        {
+                            "enumValue": "breakfast",
+                            "enumNumber": 0,
+                            "enumDescription": "",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "172dc9ce-3067-40cc-92b5-bc100f4d0fbc"
+                        },
+                        {
+                            "enumValue": "Lunch",
+                            "enumNumber": 0,
+                            "enumDescription": "",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "90e814d8-f2d8-4ab5-bdd6-58d300ecc076"
+                        },
+                        {
+                            "enumValue": "Dinner",
+                            "enumNumber": 0,
+                            "enumDescription": "",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "86c5426e-4da3-4036-8543-09aa8cde174d"
+                        },
+                        {
+                            "enumValue": "Snack",
+                            "enumNumber": 0,
+                            "enumDescription": "",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "a98114e9-45e9-4af0-8c80-011e42018b39"
+                        },
+                        {
+                            "enumValue": "Desert",
+                            "enumNumber": 0,
+                            "enumDescription": "",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "e085d808-5f5c-478b-acf8-b6746b283b5b"
+                        },
+                        {
+                            "enumValue": "Pastries",
+                            "enumNumber": 0,
+                            "enumDescription": "",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "0dd1db35-b243-48ed-a369-d292f2d65be2"
+                        }
+                    ],
+                    "columns": [],
+                    "id": "17f1d996-b556-4ce6-8a91-95a929de7b6b"
+                },
+                {
+                    "columnName": "Ingredients",
+                    "typeName": "Ingredient",
+                    "columnType": "Many",
+                    "essential": false,
+                    "description": "Recipe has many Ingredients",
+                    "id": "9e40a045-d529-4c6c-92ae-11600952c79a"
+                },
+                {
+                    "columnName": "Favorite",
+                    "typeName": "Favorite",
+                    "columnType": "OneToOne",
+                    "essential": false,
+                    "description": "Favorite has many Recipes",
+                    "id": "8f3579d9-033d-4799-b1ee-d154ac540043"
+                }
+            ],
+            "tables": [],
+            "id": "9e810818-4e2f-4246-a8d2-fbf0c0f3f699",
+            "isExpanded": true
+        },
+        {
+            "tableName": "Favorite",
+            "plural": "Favorites",
+            "tableDescription": "",
+            "columns": [
+                {
+                    "columnName": "FavoriteId",
+                    "essential": true,
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "description": "Favorite Identity Key",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "ea6e525b-cef7-451e-860c-b32d781e8da3"
+                },
+                {
+                    "columnName": "Recipe",
+                    "essential": true,
+                    "columnType": "OneToOne",
+                    "typeName": "Recipe",
+                    "description": "A Favorite  is Liked to Recipe",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "06873208-d09a-4799-85d1-562dfd3216a6"
+                }
+            ],
+            "tables": [],
+            "id": "1d60be28-a28f-4f55-9f9a-b9b0d2761746",
+            "isExpanded": true
+        },
+        {
+            "tableName": "Ingredient",
+            "plural": "Ingredients",
+            "tableDescription": "",
+            "columns": [
+                {
+                    "columnName": "IngredientId",
+                    "essential": true,
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "description": "Ingredient Identity Key",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "b131ab1f-f8e0-4e0e-936c-0eb2221117bb"
+                },
+                {
+                    "columnName": "Food",
+                    "essential": true,
+                    "columnType": "EnumType",
+                    "typeName": "FoodType",
+                    "description": "Name of the Food Item",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [
+                        {
+                            "enumValue": "Breads",
+                            "enumNumber": 0,
+                            "enumDescription": " \tBreads",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "131764b2-4219-4705-9681-a2ea7b2e3af7"
+                        },
+                        {
+                            "enumValue": "Cereals",
+                            "enumNumber": 0,
+                            "enumDescription": " \tCereals",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "9665b4eb-b089-49f5-bc05-962ccf7048d8"
+                        },
+                        {
+                            "enumValue": "Dairy products",
+                            "enumNumber": 0,
+                            "enumDescription": " \tDairy products",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "948f3180-244f-4252-90ac-ef0e9296eba9"
+                        },
+                        {
+                            "enumValue": "Edible plants",
+                            "enumNumber": 0,
+                            "enumDescription": " \tEdible plants",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "36be67d2-6be8-43b2-b550-0c724924721a"
+                        },
+                        {
+                            "enumValue": "Edible fungi",
+                            "enumNumber": 0,
+                            "enumDescription": " \tEdible fungi",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "40fdf058-f167-40b6-8d1f-5cbddc46e08a"
+                        },
+                        {
+                            "enumValue": "Edible nuts and seeds",
+                            "enumNumber": 0,
+                            "enumDescription": " \tEdible nuts and seeds",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "1623a209-29f2-4829-b828-00450db20e4a"
+                        },
+                        {
+                            "enumValue": "Legumes",
+                            "enumNumber": 0,
+                            "enumDescription": " \tLegumes",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "ab49ef1a-b785-4441-94b2-e86e4e5887fd"
+                        },
+                        {
+                            "enumValue": "Meat",
+                            "enumNumber": 0,
+                            "enumDescription": " \tMeat",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "12fcb9b8-fa3d-4cdd-a2fe-cc60e83fa3e6"
+                        },
+                        {
+                            "enumValue": "Eggs",
+                            "enumNumber": 0,
+                            "enumDescription": " \tEggs",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "bab94938-358c-451f-985f-567d4ccbb8c6"
+                        },
+                        {
+                            "enumValue": "Rice",
+                            "enumNumber": 0,
+                            "enumDescription": " \tRice",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "9f961284-d416-4f4b-b34f-5d30d0b516c1"
+                        },
+                        {
+                            "enumValue": "Seafood",
+                            "enumNumber": 0,
+                            "enumDescription": " \tSeafood",
+                            "colorValue": "",
+                            "iconValue": "",
+                            "enumSets": [],
+                            "id": "23bb76fa-2535-49fb-b356-8381ed19affd"
+                        }
+                    ],
+                    "columns": [],
+                    "id": "3c44b1ff-d373-4807-acb2-c2c857915cd6"
+                },
+                {
+                    "columnName": "Amount",
+                    "essential": true,
+                    "columnType": "IntegerType",
+                    "typeName": "",
+                    "description": "",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "43b4499b-d087-4eb9-94ee-ec1f5706e921"
+                },
+                {
+                    "columnName": "Unit",
+                    "essential": true,
+                    "columnType": "EnumType",
+                    "typeName": "UnitType",
+                    "description": "Unit of measure",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [
+                        {
+                            "columnName": "Metre",
+                            "essential": false,
+                            "columnType": "NotSet",
+                            "typeName": "",
+                            "description": "",
+                            "mockType": "",
+                            "constraint": {
+                                "minLength": 0,
+                                "maxLength": 0,
+                                "regularExpression": "",
+                                "dataSource": ""
+                            },
+                            "enumSets": [],
+                            "columns": []
+                        },
+                        {
+                            "columnName": "Gram",
+                            "essential": false,
+                            "columnType": "NotSet",
+                            "typeName": "",
+                            "description": "",
+                            "mockType": "",
+                            "constraint": {
+                                "minLength": 0,
+                                "maxLength": 0,
+                                "regularExpression": "",
+                                "dataSource": ""
+                            },
+                            "enumSets": [],
+                            "columns": []
+                        },
+                        {
+                            "columnName": "Litre",
+                            "essential": false,
+                            "columnType": "NotSet",
+                            "typeName": "",
+                            "description": "",
+                            "mockType": "",
+                            "constraint": {
+                                "minLength": 0,
+                                "maxLength": 0,
+                                "regularExpression": "",
+                                "dataSource": ""
+                            },
+                            "enumSets": [],
+                            "columns": []
+                        },
+                        {
+                            "columnName": "Degrees",
+                            "essential": false,
+                            "columnType": "NotSet",
+                            "typeName": "",
+                            "description": "",
+                            "mockType": "",
+                            "constraint": {
+                                "minLength": 0,
+                                "maxLength": 0,
+                                "regularExpression": "",
+                                "dataSource": ""
+                            },
+                            "enumSets": [],
+                            "columns": []
+                        }
+                    ],
+                    "id": "e7d8bdb4-f564-4f9d-a6af-99952935b9fc"
+                },
+                {
+                    "columnName": "Instructions",
+                    "essential": true,
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "description": "Instructions to follow while using this ingredient",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "95a19a56-a99f-4caa-b4f8-e72ae7f6d12b"
+                },
+                {
+                    "columnName": "Image",
+                    "essential": false,
+                    "columnType": "ByteArray",
+                    "typeName": "",
+                    "description": "",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": [],
+                    "id": "12c4ebba-f817-4d57-b0a7-f13db1b33dd6"
+                },
+                {
+                    "columnName": "Recipe",
+                    "typeName": "Recipe",
+                    "columnType": "One",
+                    "essential": true,
+                    "description": "Ingredient must have Recipe",
+                    "id": "4e287154-c1b0-4e28-b4d2-2350243c5239"
+                }
+            ],
+            "tables": [],
+            "id": "866cb3d5-fe15-4969-88d3-02cf6eefcd37",
+            "isExpanded": true
+        }
+    ],
+    "records": [],
+    "apis": [
+        {
+            "routineName": "GetRecipes",
+            "verb": "FetchMany",
+            "routeDescription": "Get all Recipes",
+            "plural": "Recipes",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectTypes",
+            "tableName": "Recipe",
+            "columnName": "Recipes",
+            "responses": [
+                {
+                    "columnName": "RecipeId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "3f3436e9-f731-4728-913f-dfa94d55a2c7"
+                },
+                {
+                    "columnName": "Title",
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "id": "5375e4c9-27a5-4574-bb55-cf9bf80a58c8"
+                },
+                {
+                    "columnName": "Servings",
+                    "columnType": "IntegerType",
+                    "typeName": "",
+                    "id": "c3264c44-a508-426e-ab82-c08e354801d2"
+                },
+                {
+                    "columnName": "CookTime",
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "id": "c30a2812-da26-4e85-80c7-194c861562b9"
+                },
+                {
+                    "columnName": "Image",
+                    "columnType": "ByteArray",
+                    "typeName": "",
+                    "id": "eac5f0fa-7f89-4b33-aa1e-5c91a014c706"
+                },
+                {
+                    "columnName": "RecipeType",
+                    "columnType": "EnumType",
+                    "typeName": "RecipeType",
+                    "id": "f17c4646-1ba5-402e-ab89-9c8410531170"
+                },
+                {
+                    "columnName": "Favorite",
+                    "columnType": "OneToOne",
+                    "typeName": "Favorite",
+                    "routineName": "GetRecipe",
+                    "id": "d58138d1-ba2b-4f77-925f-a9a375344c46"
+                }
+            ],
+            "id": "d8f4a390-0bda-4ec8-b9cf-edec9d42ab5d"
+        },
+        {
+            "routineName": "CreateRecipe",
+            "verb": "Create",
+            "routeDescription": "Create a new Recipe",
+            "plural": "Recipes",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Recipe",
+            "columnName": "Recipe",
+            "body": [
+                {
+                    "columnName": "RecipeId",
+                    "typeName": "",
+                    "id": "f730bfa6-d11a-48cc-92f7-fe6f42469e12"
+                },
+                {
+                    "columnName": "Title",
+                    "typeName": "",
+                    "id": "0d3b37de-efed-4b19-a4af-9b7f3d40f7e6"
+                },
+                {
+                    "columnName": "Servings",
+                    "typeName": "",
+                    "id": "b76c737f-8887-4cf4-8be7-78df72346d3f"
+                },
+                {
+                    "columnName": "CookTime",
+                    "typeName": "",
+                    "id": "637005ff-a165-4765-bb42-163a0cb5ddd9"
+                },
+                {
+                    "columnName": "Image",
+                    "typeName": "",
+                    "id": "f4175ef2-1fc1-4db1-993b-b8a47bd31fbf"
+                },
+                {
+                    "columnName": "RecipeType",
+                    "typeName": "RecipeType",
+                    "id": "25d45daf-15b8-4dbb-b32c-b1353a582596"
+                },
+                {
+                    "columnName": "Ingredients",
+                    "typeName": "Ingredient",
+                    "routineName": "undefinedAddIngredient,UpdateIngredient,AddIngredient,UpdateIngredient,",
+                    "id": "bb107dfc-edc5-4915-a078-9027683666a1"
+                },
+                {
+                    "columnName": "Favorite",
+                    "typeName": "Favorite",
+                    "routineName": "GetRecipe",
+                    "id": "c1628e3f-780e-4532-9f7f-e1dc7e7cb7d0"
+                }
+            ],
+            "id": "3f119f38-09ae-4eb5-849e-c4e9a7d41939"
+        },
+        {
+            "routineName": "GetRecipe",
+            "verb": "FetchOne",
+            "routeDescription": "Get a Recipe",
+            "plural": "Recipes",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Recipe",
+            "columnName": "Recipe",
+            "routes": [
+                {
+                    "columnName": "RecipeId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Recipe",
+                    "id": "492924e2-3a13-4b2d-8b9a-a2e28a0ab0fa"
+                }
+            ],
+            "responses": [
+                {
+                    "columnName": "RecipeId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "c1d677fa-aa3b-44e9-aaee-585376f7d0d9"
+                },
+                {
+                    "columnName": "Title",
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "id": "acfe25b7-f5bf-4f1b-a0b6-b7cecf19c9c6"
+                },
+                {
+                    "columnName": "Servings",
+                    "columnType": "IntegerType",
+                    "typeName": "",
+                    "id": "3fb4838f-86b3-454e-99bb-b4a746ad30da"
+                },
+                {
+                    "columnName": "CookTime",
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "id": "153e7869-8f6d-43c9-821c-51367b7142d6"
+                },
+                {
+                    "columnName": "Image",
+                    "columnType": "ByteArray",
+                    "typeName": "",
+                    "id": "42f5b1ce-b8fc-4204-ac34-5307390e2f76"
+                },
+                {
+                    "columnName": "RecipeType",
+                    "columnType": "EnumType",
+                    "typeName": "RecipeType",
+                    "id": "60438422-193e-4f07-986c-d32365aef71a"
+                },
+                {
+                    "columnName": "Favorite",
+                    "columnType": "OneToOne",
+                    "typeName": "Favorite",
+                    "routineName": "GetRecipe",
+                    "id": "7e367d2b-30dd-4770-9453-4554fc42c168"
+                }
+            ],
+            "id": "31b93659-8cc9-4844-ad49-03bfce19643c"
+        },
+        {
+            "routineName": "UpdateRecipe",
+            "verb": "Update",
+            "routeDescription": "Update a Recipe",
+            "plural": "Recipes",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Recipe",
+            "columnName": "Recipe",
+            "routes": [
+                {
+                    "columnName": "RecipeId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Recipe",
+                    "id": "4088565c-f75b-45eb-93cd-c52c1944ede6"
+                }
+            ],
+            "body": [
+                {
+                    "columnName": "RecipeId",
+                    "typeName": "",
+                    "id": "98975303-48aa-4d35-86f0-77cabbab0d62"
+                },
+                {
+                    "columnName": "Title",
+                    "typeName": "",
+                    "id": "d61b8e60-6b2b-48ca-8230-32b70221dcc6"
+                },
+                {
+                    "columnName": "Servings",
+                    "typeName": "",
+                    "id": "85afb2e6-491c-45c7-9c08-edab2cc4b3df"
+                },
+                {
+                    "columnName": "CookTime",
+                    "typeName": "",
+                    "id": "ac06bc17-62db-4cf6-8035-f621adf03d94"
+                },
+                {
+                    "columnName": "Image",
+                    "typeName": "",
+                    "id": "27ead2a2-3a7f-4fe2-9a3b-28747e81bbe5"
+                },
+                {
+                    "columnName": "RecipeType",
+                    "typeName": "RecipeType",
+                    "id": "93434236-54b5-49e1-955d-44ff99272a46"
+                },
+                {
+                    "columnName": "Ingredients",
+                    "typeName": "Ingredient",
+                    "routineName": "undefinedAddIngredient,UpdateIngredient,AddIngredient,UpdateIngredient,",
+                    "id": "5c7c7be1-4d44-4033-85df-6104222b56d8"
+                },
+                {
+                    "columnName": "Favorite",
+                    "typeName": "Favorite",
+                    "routineName": "GetRecipe",
+                    "id": "631c97bb-dba3-4c8e-a66d-5b5d7e0ae3c8"
+                }
+            ],
+            "id": "3004d07c-ff0f-44ac-9f1e-55bf5be91619"
+        },
+        {
+            "routineName": "DeleteRecipe",
+            "verb": "Delete",
+            "routeDescription": "Delete a Recipe",
+            "plural": "Recipes",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Recipe",
+            "columnName": "Recipe",
+            "routes": [
+                {
+                    "columnName": "RecipeId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Recipe",
+                    "id": "7e06e247-2537-4ae1-8db0-2bd354f3e3d7"
+                }
+            ],
+            "id": "f655c1be-8075-4124-8383-5e476691f2fb"
+        },
+        {
+            "routineName": "GetRecipe",
+            "verb": "FetchManyByFk",
+            "routeDescription": "Fetch Favorites by Recipe",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectTypes",
+            "tableName": "Favorite",
+            "columnName": "Recipe",
+            "responses": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "eb8753cd-ce7d-4693-bb70-577cffa7cbe4"
+                },
+                {
+                    "columnName": "Recipe",
+                    "columnType": "OneToOne",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "f347c716-f889-48d8-bcb4-b687713a5eea"
+                }
+            ],
+            "id": "05748f8e-18de-4bab-9236-7824284c8e6b"
+        },
+        {
+            "routineName": "GetFavoriteByRecipe",
+            "verb": "FetchOneFk",
+            "routeDescription": "Fetch Recipe",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Favorite",
+            "columnName": "Recipe",
+            "routes": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Favorite",
+                    "id": "50b56c74-f4e4-4c7f-b488-5a4079672e2c"
+                }
+            ],
+            "responses": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "ec3a5d39-1348-42f3-8c94-d490c76c225d"
+                },
+                {
+                    "columnName": "Recipe",
+                    "columnType": "OneToOne",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "71d8064e-c4d0-4d33-afcc-b69a073cbb84"
+                }
+            ],
+            "id": "309e1d50-bc6d-40dd-b730-2037bd8950e7"
+        },
+        {
+            "routineName": "AddFavorite",
+            "verb": "CreateByFk",
+            "routeDescription": "AddFavoriteToRecipe",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Favorite",
+            "columnName": "Recipe",
+            "id": "8c261eaf-aed0-4769-8d21-ac70c070b889"
+        },
+        {
+            "routineName": "UpdateFavorite",
+            "verb": "UpdateByFk",
+            "routeDescription": "Update Favorite",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Favorite",
+            "columnName": "Recipe",
+            "routes": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Favorite",
+                    "id": "57a5960f-a07e-4e52-8039-87a22916b2f0"
+                }
+            ],
+            "id": "2daa07b4-0d12-4cf4-b889-5191a89df3f2"
+        },
+        {
+            "routineName": "DeleteFavorite",
+            "verb": "DeleteByFk",
+            "routeDescription": "Delete Favorite",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Favorite",
+            "columnName": "Recipe",
+            "routes": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Favorite",
+                    "id": "2eddfa8a-cf23-470a-b079-f00968ec1a78"
+                }
+            ],
+            "id": "6dceddc7-2805-4aec-8114-5ae47c3591f2"
+        },
+        {
+            "routineName": "GetFavorite",
+            "verb": "FetchManyByFk",
+            "routeDescription": "Fetch Favorites by Recipe",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectTypes",
+            "tableName": "Favorite",
+            "columnName": "Favorite",
+            "responses": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "ae4d9618-97f8-46b7-bf1f-64d22e3b349b"
+                },
+                {
+                    "columnName": "Recipe",
+                    "columnType": "OneToOne",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "e188bd3f-79ed-40ea-bc9c-9ae49a9b26cd"
+                }
+            ],
+            "id": "a6eeb48a-0d78-4974-9afc-706b464abc96"
+        },
+        {
+            "routineName": "GetFavoriteByRecipe",
+            "verb": "FetchOneFk",
+            "routeDescription": "Fetch Recipe",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Favorite",
+            "columnName": "Favorite",
+            "routes": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Favorite",
+                    "id": "82053bed-752d-4f30-94e5-c2e06cebda81"
+                }
+            ],
+            "responses": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "384ca5cf-300d-428f-824a-bd2d62e1fba2"
+                },
+                {
+                    "columnName": "Recipe",
+                    "columnType": "OneToOne",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "c5786e4a-769d-4cde-bc84-51671805585d"
+                }
+            ],
+            "id": "cb99f008-06f3-4737-a068-757b58d974cd"
+        },
+        {
+            "routineName": "AddFavorite",
+            "verb": "CreateByFk",
+            "routeDescription": "AddFavoriteToFavorite",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Favorite",
+            "columnName": "Favorite",
+            "id": "44e44d72-905c-4443-87cf-3c015265dd29"
+        },
+        {
+            "routineName": "UpdateFavorite",
+            "verb": "UpdateByFk",
+            "routeDescription": "Update Favorite",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Favorite",
+            "columnName": "Favorite",
+            "routes": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Favorite",
+                    "id": "587d8ea3-4c90-4953-9514-0d219f8785ab"
+                }
+            ],
+            "id": "2f43ab29-ac3a-4d0d-af5d-a316f81d62f0"
+        },
+        {
+            "routineName": "DeleteFavorite",
+            "verb": "DeleteByFk",
+            "routeDescription": "Delete Favorite",
+            "plural": "Favorites",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Favorite",
+            "columnName": "Favorite",
+            "routes": [
+                {
+                    "columnName": "FavoriteId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Favorite",
+                    "id": "83d7995e-6872-420f-8fc3-557228fe4484"
+                }
+            ],
+            "id": "eaaf1cfb-888c-4df4-bb1c-180746ee3b84"
+        },
+        {
+            "routineName": "GetRecipe",
+            "verb": "FetchManyByFk",
+            "routeDescription": "Fetch Ingredients by Recipe",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectTypes",
+            "tableName": "Ingredient",
+            "columnName": "Recipe",
+            "responses": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "1efe5da3-2ae0-4fcb-a475-393b5b402c5f"
+                },
+                {
+                    "columnName": "Food",
+                    "columnType": "EnumType",
+                    "typeName": "FoodType",
+                    "id": "39391a38-d35a-46f4-b64a-90da5a350ada"
+                },
+                {
+                    "columnName": "Amount",
+                    "columnType": "IntegerType",
+                    "typeName": "",
+                    "id": "b9acd442-7747-49a6-8822-b56ec00643e7"
+                },
+                {
+                    "columnName": "Unit",
+                    "columnType": "EnumType",
+                    "typeName": "UnitType",
+                    "id": "1bd091c7-ef68-42e1-86e2-926188129531"
+                },
+                {
+                    "columnName": "Instructions",
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "id": "a93c8010-45f3-4d7c-ba45-fe231bd2d21a"
+                },
+                {
+                    "columnName": "Image",
+                    "columnType": "ByteArray",
+                    "typeName": "",
+                    "id": "7f758e13-3231-4fb5-b752-57aea6e8494f"
+                },
+                {
+                    "columnName": "Recipe",
+                    "columnType": "One",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "a3ccc6c0-997a-4bd0-adb3-3b0342791a49"
+                }
+            ],
+            "id": "e2bf8f8f-4dc6-41db-acc4-c5d096df4531"
+        },
+        {
+            "routineName": "GetIngredientByRecipe",
+            "verb": "FetchOneFk",
+            "routeDescription": "Fetch Recipe",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Ingredient",
+            "columnName": "Recipe",
+            "routes": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Ingredient",
+                    "id": "fd757eba-520c-4290-8e7e-5b67bfcbf045"
+                }
+            ],
+            "responses": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "31b60610-0488-4ebb-9aff-860899469b75"
+                },
+                {
+                    "columnName": "Food",
+                    "columnType": "EnumType",
+                    "typeName": "FoodType",
+                    "id": "7babfe2f-810d-41de-9e92-578d5046a65e"
+                },
+                {
+                    "columnName": "Amount",
+                    "columnType": "IntegerType",
+                    "typeName": "",
+                    "id": "1bb2b205-3916-484f-a543-4a603f879e35"
+                },
+                {
+                    "columnName": "Unit",
+                    "columnType": "EnumType",
+                    "typeName": "UnitType",
+                    "id": "7bfd8327-37c8-492b-809e-4d926a11494c"
+                },
+                {
+                    "columnName": "Instructions",
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "id": "8c67f750-ac4e-40d0-83b6-c02fa907da8c"
+                },
+                {
+                    "columnName": "Image",
+                    "columnType": "ByteArray",
+                    "typeName": "",
+                    "id": "6891b72a-28b6-4155-a3bb-25d0079b6d83"
+                },
+                {
+                    "columnName": "Recipe",
+                    "columnType": "One",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "b1294fe9-7486-426d-a641-8dd7ac1d800f"
+                }
+            ],
+            "id": "db8e0fc2-6019-4f63-9024-34a7986c44c3"
+        },
+        {
+            "routineName": "AddIngredient",
+            "verb": "CreateByFk",
+            "routeDescription": "AddIngredientToRecipe",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Ingredient",
+            "columnName": "Recipe",
+            "body": [
+                {
+                    "columnName": "IngredientId",
+                    "typeName": "",
+                    "id": "98760249-ddb0-4ef2-8561-1d924720aafb"
+                },
+                {
+                    "columnName": "Food",
+                    "typeName": "FoodType",
+                    "id": "c49172b2-7c5f-4916-a19a-339011380fa3"
+                },
+                {
+                    "columnName": "Amount",
+                    "typeName": "",
+                    "id": "7a679715-e6d6-46cd-be99-26c18d436f31"
+                },
+                {
+                    "columnName": "Unit",
+                    "typeName": "UnitType",
+                    "body": [
+                        {
+                            "columnName": "Metre",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Gram",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Litre",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Degrees",
+                            "typeName": ""
+                        }
+                    ],
+                    "id": "17c33490-a04f-4bc7-9424-c9288eb63a68"
+                },
+                {
+                    "columnName": "Instructions",
+                    "typeName": "",
+                    "id": "f7c32972-9b09-4712-b7bd-0bc092fc5c8e"
+                },
+                {
+                    "columnName": "Image",
+                    "typeName": "",
+                    "id": "73d6f12a-dfe8-48b2-8845-2a9b72d10ef5"
+                },
+                {
+                    "columnName": "Recipe",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "82a628a0-1189-4ba5-8612-dc33e981c5a5"
+                }
+            ],
+            "id": "3e14ac25-8729-4237-b683-7195f8ea1ae9"
+        },
+        {
+            "routineName": "UpdateIngredient",
+            "verb": "UpdateByFk",
+            "routeDescription": "Update Ingredient",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Ingredient",
+            "columnName": "Recipe",
+            "routes": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Ingredient",
+                    "id": "275205f2-6ab6-4f74-89b4-57e37a344b84"
+                }
+            ],
+            "body": [
+                {
+                    "columnName": "IngredientId",
+                    "typeName": "",
+                    "id": "87e2433a-8a24-453a-9c69-11a24fbfb2ab"
+                },
+                {
+                    "columnName": "Food",
+                    "typeName": "FoodType",
+                    "id": "43dab181-8f6b-4316-ab19-67a1fa540815"
+                },
+                {
+                    "columnName": "Amount",
+                    "typeName": "",
+                    "id": "5c5d8909-5984-414e-b293-d04b72922ce7"
+                },
+                {
+                    "columnName": "Unit",
+                    "typeName": "UnitType",
+                    "body": [
+                        {
+                            "columnName": "Metre",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Gram",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Litre",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Degrees",
+                            "typeName": ""
+                        }
+                    ],
+                    "id": "2283f202-a78f-43ac-ac7b-540915729401"
+                },
+                {
+                    "columnName": "Instructions",
+                    "typeName": "",
+                    "id": "413a890e-ed5e-4f13-b265-77ee33f42ab7"
+                },
+                {
+                    "columnName": "Image",
+                    "typeName": "",
+                    "id": "3f46c06d-9d0e-46b5-bf41-8c3cc42ec9f7"
+                },
+                {
+                    "columnName": "Recipe",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "3de76602-a8bd-4266-92fc-d955aa45f886"
+                }
+            ],
+            "id": "31508f27-4115-43af-b373-2b81bb0bfda9"
+        },
+        {
+            "routineName": "DeleteIngredient",
+            "verb": "DeleteByFk",
+            "routeDescription": "Delete Ingredient",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Ingredient",
+            "columnName": "Recipe",
+            "routes": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Ingredient",
+                    "id": "a9a8af50-f63b-4ba9-bd89-fd96ff79fc4e"
+                }
+            ],
+            "id": "2a0ba0e9-8b5d-4022-bd0c-4f6d720bf3d4"
+        },
+        {
+            "routineName": "GetIngredients",
+            "verb": "FetchManyByFk",
+            "routeDescription": "Fetch Ingredients by Recipe",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectTypes",
+            "tableName": "Ingredient",
+            "columnName": "Ingredients",
+            "responses": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "d1a80044-f650-4f19-9306-e578167b198e"
+                },
+                {
+                    "columnName": "Food",
+                    "columnType": "EnumType",
+                    "typeName": "FoodType",
+                    "id": "33adf983-e4d6-4742-8488-51339c3ac13b"
+                },
+                {
+                    "columnName": "Amount",
+                    "columnType": "IntegerType",
+                    "typeName": "",
+                    "id": "c6d7cc88-d6cd-483f-b730-aa04312a6f8f"
+                },
+                {
+                    "columnName": "Unit",
+                    "columnType": "EnumType",
+                    "typeName": "UnitType",
+                    "id": "ca5189e5-515d-4af3-a5e0-e748807e6e82"
+                },
+                {
+                    "columnName": "Instructions",
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "id": "03962e87-f6fd-4408-bdd8-cd8fb36f3662"
+                },
+                {
+                    "columnName": "Image",
+                    "columnType": "ByteArray",
+                    "typeName": "",
+                    "id": "f54cc40a-daa2-4175-8cab-4febb989fac7"
+                },
+                {
+                    "columnName": "Recipe",
+                    "columnType": "One",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "0001a12b-1e97-4f94-bc93-97999183b967"
+                }
+            ],
+            "id": "2810cce4-50d0-4b07-9d93-7593b0807be6"
+        },
+        {
+            "routineName": "GetIngredientByRecipe",
+            "verb": "FetchOneFk",
+            "routeDescription": "Fetch Recipe",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Ingredient",
+            "columnName": "Ingredients",
+            "routes": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Ingredient",
+                    "id": "12e0991d-0fe0-4802-bfee-2a8dab790878"
+                }
+            ],
+            "responses": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "",
+                    "id": "401b738f-b724-438c-8682-e61328f0f76a"
+                },
+                {
+                    "columnName": "Food",
+                    "columnType": "EnumType",
+                    "typeName": "FoodType",
+                    "id": "71554158-3da2-4993-ae4a-251f2007eb66"
+                },
+                {
+                    "columnName": "Amount",
+                    "columnType": "IntegerType",
+                    "typeName": "",
+                    "id": "c0278c83-6acf-4e0a-bd0c-3f6534e93ee0"
+                },
+                {
+                    "columnName": "Unit",
+                    "columnType": "EnumType",
+                    "typeName": "UnitType",
+                    "id": "84a35a49-6304-4786-94b1-bc64e2ab5996"
+                },
+                {
+                    "columnName": "Instructions",
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "id": "5e5258b6-ac87-4b21-aab5-b0eb5c6b9223"
+                },
+                {
+                    "columnName": "Image",
+                    "columnType": "ByteArray",
+                    "typeName": "",
+                    "id": "d66ee073-c2cb-4116-b8ef-3941865dc628"
+                },
+                {
+                    "columnName": "Recipe",
+                    "columnType": "One",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "fc0ec226-f577-4cc7-9812-e7218d7f326e"
+                }
+            ],
+            "id": "c39a087f-896f-4a80-980d-0613e1eb9418"
+        },
+        {
+            "routineName": "AddIngredient",
+            "verb": "CreateByFk",
+            "routeDescription": "AddIngredientToIngredients",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "ObjectType",
+            "tableName": "Ingredient",
+            "columnName": "Ingredients",
+            "body": [
+                {
+                    "columnName": "IngredientId",
+                    "typeName": "",
+                    "id": "a32e36d2-4c96-4fbb-bb56-8e0f0bfcce14"
+                },
+                {
+                    "columnName": "Food",
+                    "typeName": "FoodType",
+                    "id": "f1391e6e-5a5c-4e15-9a0e-80347f769888"
+                },
+                {
+                    "columnName": "Amount",
+                    "typeName": "",
+                    "id": "6fa93ef4-5a41-46cc-875a-806550abd475"
+                },
+                {
+                    "columnName": "Unit",
+                    "typeName": "UnitType",
+                    "body": [
+                        {
+                            "columnName": "Metre",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Gram",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Litre",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Degrees",
+                            "typeName": ""
+                        }
+                    ],
+                    "id": "51c65942-5cbe-4110-b06e-aa28f2e24617"
+                },
+                {
+                    "columnName": "Instructions",
+                    "typeName": "",
+                    "id": "90c08652-64c0-406a-8ef1-9a1bb4b0b34a"
+                },
+                {
+                    "columnName": "Image",
+                    "typeName": "",
+                    "id": "9c716e3a-b59a-4784-b7fe-fd4125399af9"
+                },
+                {
+                    "columnName": "Recipe",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "0c2b4081-d68b-49aa-831b-9665a7d753d5"
+                }
+            ],
+            "id": "7eab491d-a9ad-4a48-b7d8-90db2ae881de"
+        },
+        {
+            "routineName": "UpdateIngredient",
+            "verb": "UpdateByFk",
+            "routeDescription": "Update Ingredient",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Ingredient",
+            "columnName": "Ingredients",
+            "routes": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Ingredient",
+                    "id": "35ed543e-d506-4ea9-8e78-06153cca3ec6"
+                }
+            ],
+            "body": [
+                {
+                    "columnName": "IngredientId",
+                    "typeName": "",
+                    "id": "d1961048-18e6-4b10-accc-60481e12fa6d"
+                },
+                {
+                    "columnName": "Food",
+                    "typeName": "FoodType",
+                    "id": "38e2ff8e-c84b-4695-97bc-1145e767dd70"
+                },
+                {
+                    "columnName": "Amount",
+                    "typeName": "",
+                    "id": "3f2fbd03-a12a-4b7e-812a-99d4e0341198"
+                },
+                {
+                    "columnName": "Unit",
+                    "typeName": "UnitType",
+                    "body": [
+                        {
+                            "columnName": "Metre",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Gram",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Litre",
+                            "typeName": ""
+                        },
+                        {
+                            "columnName": "Degrees",
+                            "typeName": ""
+                        }
+                    ],
+                    "id": "e0ece440-4cf7-41dc-a440-37dda9509c0d"
+                },
+                {
+                    "columnName": "Instructions",
+                    "typeName": "",
+                    "id": "5250a8ea-8b3d-44fd-b9cb-88f9f4c897be"
+                },
+                {
+                    "columnName": "Image",
+                    "typeName": "",
+                    "id": "98f0d291-7eb7-4afd-9bbc-6a8f84ecd23c"
+                },
+                {
+                    "columnName": "Recipe",
+                    "typeName": "Recipe",
+                    "routineName": "GetRecipes",
+                    "id": "7bcaa583-cb22-4b15-ae9e-a720706b8edc"
+                }
+            ],
+            "id": "3530f94c-8438-46a1-a1c1-474e95b8e097"
+        },
+        {
+            "routineName": "DeleteIngredient",
+            "verb": "DeleteByFk",
+            "routeDescription": "Delete Ingredient",
+            "plural": "Ingredients",
+            "authenticationType": "AuthRequired",
+            "responseType": "HttpStatusCode",
+            "tableName": "Ingredient",
+            "columnName": "Ingredients",
+            "routes": [
+                {
+                    "columnName": "IngredientId",
+                    "columnType": "NumericKeyType",
+                    "typeName": "Ingredient",
+                    "id": "14318524-7853-46ed-a419-0103a150ce10"
+                }
+            ],
+            "id": "e10101c5-338f-4303-ad14-2dec906a6bfb"
+        }
+    ],
+    "views": [
+        {
+            "viewName": "Recipes",
+            "tableName": "Recipe",
+            "routineName": "GetRecipes",
+            "verb": "FetchMany",
+            "viewType": "ListType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "Image",
+                                    "columnType": "ByteArray",
+                                    "typeName": "",
+                                    "elementType": "ImagePicker"
+                                },
+                                {
+                                    "columnName": "RecipeType",
+                                    "columnType": "EnumType",
+                                    "typeName": "RecipeType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "RecipeId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "RecipeId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                },
+                                {
+                                    "columnName": "Title",
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "elementType": "ItemTitle"
+                                },
+                                {
+                                    "columnName": "CookTime",
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "elementType": "ItemSubTitle"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": [
+                                {
+                                    "columnName": "RecipeType",
+                                    "columnType": "EnumType",
+                                    "typeName": "RecipeType",
+                                    "elementType": "EnumPicker"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "d5435c9f-6e99-431c-a2ba-4496047e3028"
+                }
+            ],
+            "id": "ee3dd596-85cd-4c6a-a0a1-6af2f9946431"
+        },
+        {
+            "viewName": "CreateRecipe",
+            "tableName": "Recipe",
+            "routineName": "CreateRecipe",
+            "verb": "Create",
+            "viewType": "Form",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Content",
+                            "elements": []
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": []
+                        }
+                    ],
+                    "id": "2c54adbf-5f58-4cf7-b8b8-ce6a2d1bafa4"
+                }
+            ],
+            "id": "6706f1d3-7c4b-4d61-91a1-23bc80268dae"
+        },
+        {
+            "viewName": "Recipe",
+            "tableName": "Recipe",
+            "routineName": "GetRecipe",
+            "verb": "FetchOne",
+            "viewType": "DetailType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "Image",
+                                    "columnType": "ByteArray",
+                                    "typeName": "",
+                                    "elementType": "ImagePicker"
+                                },
+                                {
+                                    "columnName": "RecipeType",
+                                    "columnType": "EnumType",
+                                    "typeName": "RecipeType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "RecipeId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "RecipeId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                },
+                                {
+                                    "columnName": "Title",
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "elementType": "ItemTitle"
+                                },
+                                {
+                                    "columnName": "CookTime",
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "elementType": "ItemSubTitle"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": [
+                                {
+                                    "columnName": "RecipeType",
+                                    "columnType": "EnumType",
+                                    "typeName": "RecipeType",
+                                    "elementType": "EnumPicker"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "fd65626c-f8bb-4e5b-9cb9-fae1764b05d9"
+                }
+            ],
+            "id": "9f9b9930-3ee2-482e-81c7-7bd1d8087dad"
+        },
+        {
+            "viewName": "Recipe",
+            "tableName": "Favorite",
+            "routineName": "GetRecipe",
+            "verb": "FetchManyByFk",
+            "viewType": "ListType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "FavoriteId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "FavoriteId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": []
+                        }
+                    ],
+                    "id": "a54f8820-6fdc-4e15-9ee8-5d6ffdeebd2b"
+                }
+            ],
+            "id": "b84a973b-e6ad-4bc9-8564-5fd777debd63"
+        },
+        {
+            "viewName": "FavoriteRecipe",
+            "tableName": "Favorite",
+            "routineName": "GetFavoriteByRecipe",
+            "verb": "FetchOneFk",
+            "viewType": "DetailType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "FavoriteId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "FavoriteId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": []
+                        }
+                    ],
+                    "id": "6e8e1bc7-dc83-43b8-9097-311119a4bb39"
+                }
+            ],
+            "id": "9eeabdce-25c5-4d07-b33a-5fa12dd8d656"
+        },
+        {
+            "viewName": "Favorite",
+            "tableName": "Favorite",
+            "routineName": "AddFavorite",
+            "verb": "CreateByFk",
+            "viewType": "Form",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Content",
+                            "elements": []
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": []
+                        }
+                    ],
+                    "id": "3a5f9f0e-8d31-41d5-a735-1f3ed69b6bb9"
+                }
+            ],
+            "id": "334cd5ba-2619-4842-b80a-aaef135dce02"
+        },
+        {
+            "viewName": "Favorite",
+            "tableName": "Favorite",
+            "routineName": "GetFavorite",
+            "verb": "FetchManyByFk",
+            "viewType": "ListType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "FavoriteId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "FavoriteId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": []
+                        }
+                    ],
+                    "id": "ca8b5a13-46dc-4953-ab12-98bba403db4d"
+                }
+            ],
+            "id": "5beee983-919e-4ec9-a9c3-ba8c905fdb20"
+        },
+        {
+            "viewName": "FavoriteRecipe",
+            "tableName": "Favorite",
+            "routineName": "GetFavoriteByRecipe",
+            "verb": "FetchOneFk",
+            "viewType": "DetailType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "FavoriteId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "FavoriteId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": []
+                        }
+                    ],
+                    "id": "24f7f3b5-84ea-466f-a1b4-68dd791e393b"
+                }
+            ],
+            "id": "2d29ba0d-c6df-47fa-88d6-298784d3e938"
+        },
+        {
+            "viewName": "Favorite",
+            "tableName": "Favorite",
+            "routineName": "AddFavorite",
+            "verb": "CreateByFk",
+            "viewType": "Form",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Content",
+                            "elements": []
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": []
+                        }
+                    ],
+                    "id": "9633190a-d88e-477a-abe4-44d87806aaf4"
+                }
+            ],
+            "id": "9f556a19-6f92-42ce-8a7a-d5af9de9ee13"
+        },
+        {
+            "viewName": "Recipe",
+            "tableName": "Ingredient",
+            "routineName": "GetRecipe",
+            "verb": "FetchManyByFk",
+            "viewType": "ListType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "Image",
+                                    "columnType": "ByteArray",
+                                    "typeName": "",
+                                    "elementType": "ImagePicker"
+                                },
+                                {
+                                    "columnName": "Food",
+                                    "columnType": "EnumType",
+                                    "typeName": "FoodType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "Unit",
+                                    "columnType": "EnumType",
+                                    "typeName": "UnitType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "IngredientId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "IngredientId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                },
+                                {
+                                    "columnName": "Instructions",
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "elementType": "ItemTitle"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": [
+                                {
+                                    "columnName": "Food",
+                                    "columnType": "EnumType",
+                                    "typeName": "FoodType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "Unit",
+                                    "columnType": "EnumType",
+                                    "typeName": "UnitType",
+                                    "elementType": "EnumPicker"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "e958acf6-fc56-4601-aa51-2e6ccfee8586"
+                }
+            ],
+            "id": "fede1570-54c0-45be-95fa-c3f6ee4fc59b"
+        },
+        {
+            "viewName": "IngredientRecipe",
+            "tableName": "Ingredient",
+            "routineName": "GetIngredientByRecipe",
+            "verb": "FetchOneFk",
+            "viewType": "DetailType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "Image",
+                                    "columnType": "ByteArray",
+                                    "typeName": "",
+                                    "elementType": "ImagePicker"
+                                },
+                                {
+                                    "columnName": "Food",
+                                    "columnType": "EnumType",
+                                    "typeName": "FoodType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "Unit",
+                                    "columnType": "EnumType",
+                                    "typeName": "UnitType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "IngredientId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "IngredientId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                },
+                                {
+                                    "columnName": "Instructions",
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "elementType": "ItemTitle"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": [
+                                {
+                                    "columnName": "Food",
+                                    "columnType": "EnumType",
+                                    "typeName": "FoodType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "Unit",
+                                    "columnType": "EnumType",
+                                    "typeName": "UnitType",
+                                    "elementType": "EnumPicker"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "2bda5265-b57a-479d-ae95-4a5edf138b1e"
+                }
+            ],
+            "id": "3dd955de-8944-4539-8eb1-222f6b9acf9f"
+        },
+        {
+            "viewName": "Ingredient",
+            "tableName": "Ingredient",
+            "routineName": "AddIngredient",
+            "verb": "CreateByFk",
+            "viewType": "Form",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Content",
+                            "elements": []
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": []
+                        }
+                    ],
+                    "id": "220af211-62e9-43f7-8f42-9a074e305baf"
+                }
+            ],
+            "id": "bd5e51c0-7732-40f7-be3e-2eb959f5065a"
+        },
+        {
+            "viewName": "Ingredients",
+            "tableName": "Ingredient",
+            "routineName": "GetIngredients",
+            "verb": "FetchManyByFk",
+            "viewType": "ListType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "Image",
+                                    "columnType": "ByteArray",
+                                    "typeName": "",
+                                    "elementType": "ImagePicker"
+                                },
+                                {
+                                    "columnName": "Food",
+                                    "columnType": "EnumType",
+                                    "typeName": "FoodType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "Unit",
+                                    "columnType": "EnumType",
+                                    "typeName": "UnitType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "IngredientId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "IngredientId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                },
+                                {
+                                    "columnName": "Instructions",
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "elementType": "ItemTitle"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": [
+                                {
+                                    "columnName": "Food",
+                                    "columnType": "EnumType",
+                                    "typeName": "FoodType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "Unit",
+                                    "columnType": "EnumType",
+                                    "typeName": "UnitType",
+                                    "elementType": "EnumPicker"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "bb98fb6a-f600-478b-9c69-e3917eda31bd"
+                }
+            ],
+            "id": "d8741a00-3a76-43b8-8870-bbc20a3556ed"
+        },
+        {
+            "viewName": "IngredientRecipe",
+            "tableName": "Ingredient",
+            "routineName": "GetIngredientByRecipe",
+            "verb": "FetchOneFk",
+            "viewType": "DetailType",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Header",
+                            "elements": [
+                                {
+                                    "columnName": "Image",
+                                    "columnType": "ByteArray",
+                                    "typeName": "",
+                                    "elementType": "ImagePicker"
+                                },
+                                {
+                                    "columnName": "Food",
+                                    "columnType": "EnumType",
+                                    "typeName": "FoodType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "Unit",
+                                    "columnType": "EnumType",
+                                    "typeName": "UnitType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "IngredientId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Content",
+                            "elements": [
+                                {
+                                    "columnName": "IngredientId",
+                                    "columnType": "NumericKeyType",
+                                    "typeName": "",
+                                    "elementType": "KeyItem"
+                                },
+                                {
+                                    "columnName": "Instructions",
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "elementType": "ItemTitle"
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": [
+                                {
+                                    "columnName": "Food",
+                                    "columnType": "EnumType",
+                                    "typeName": "FoodType",
+                                    "elementType": "EnumPicker"
+                                },
+                                {
+                                    "columnName": "Unit",
+                                    "columnType": "EnumType",
+                                    "typeName": "UnitType",
+                                    "elementType": "EnumPicker"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "86057e6b-2ac8-4ce3-ae33-fb8045d55f9d"
+                }
+            ],
+            "id": "12d6bbae-4d22-4034-8fcb-35c01530269c"
+        },
+        {
+            "viewName": "Ingredient",
+            "tableName": "Ingredient",
+            "routineName": "AddIngredient",
+            "verb": "CreateByFk",
+            "viewType": "Form",
+            "elements": [
+                {
+                    "elementType": "Horizontal",
+                    "elements": [
+                        {
+                            "elementType": "Content",
+                            "elements": []
+                        },
+                        {
+                            "elementType": "Footer",
+                            "elements": []
+                        }
+                    ],
+                    "id": "3af530c5-0301-47b9-9407-ff79012d5b79"
+                }
+            ],
+            "id": "1807935a-570b-4a50-89bf-24f362b6a98b"
+        }
+    ],
+    "sections": [],
+    "snippets": [],
+    "folders": [],
+    "id": "942a4c65-9ae5-40d2-a7bd-bc127034c442"
+}

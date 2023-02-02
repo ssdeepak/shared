@@ -1,0 +1,544 @@
+{
+    "projectName": "Conference",
+    "categoryType": "Other",
+    "projectDescription": "a mobile app to help attendees and meeting planners manage their conference experience",
+    "tables": [
+        {
+            "tableName": "Schedule",
+            "plural": "Schedules",
+            "tableDescription": "",
+            "columns": [
+                {
+                    "columnName": "ConferenceName",
+                    "essential": true,
+                    "columnType": "StringType",
+                    "typeName": "",
+                    "description": "Session Name",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": []
+                },
+                {
+                    "columnName": "FromDate",
+                    "essential": true,
+                    "columnType": "DateType",
+                    "typeName": "",
+                    "description": "Date when the session is available",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": []
+                },
+                {
+                    "columnName": "ToDate",
+                    "essential": true,
+                    "columnType": "DateType",
+                    "typeName": "",
+                    "description": "Date until the end of sessions",
+                    "mockType": "",
+                    "constraint": {
+                        "minLength": 0,
+                        "maxLength": 0,
+                        "regularExpression": "",
+                        "dataSource": ""
+                    },
+                    "enumSets": [],
+                    "columns": []
+                }
+            ],
+            "tables": [
+                {
+                    "tableName": "Session",
+                    "plural": "Sessions",
+                    "tableDescription": "",
+                    "columns": [
+                        {
+                            "columnName": "Name",
+                            "essential": false,
+                            "columnType": "StringType",
+                            "typeName": "",
+                            "description": "Session Name",
+                            "mockType": "",
+                            "constraint": {
+                                "minLength": 0,
+                                "maxLength": 0,
+                                "regularExpression": "",
+                                "dataSource": ""
+                            },
+                            "enumSets": [],
+                            "columns": []
+                        },
+                        {
+                            "columnName": "TimeStart",
+                            "essential": true,
+                            "columnType": "TimeType",
+                            "typeName": "",
+                            "description": "Date when the session is available",
+                            "mockType": "",
+                            "constraint": {
+                                "minLength": 0,
+                                "maxLength": 0,
+                                "regularExpression": "",
+                                "dataSource": ""
+                            },
+                            "enumSets": [],
+                            "columns": []
+                        },
+                        {
+                            "columnName": "TimeEnd",
+                            "essential": false,
+                            "columnType": "TimeType",
+                            "typeName": "",
+                            "description": "",
+                            "mockType": "",
+                            "constraint": {
+                                "minLength": 0,
+                                "maxLength": 0,
+                                "regularExpression": "",
+                                "dataSource": ""
+                            },
+                            "enumSets": [],
+                            "columns": []
+                        }
+                    ],
+                    "tables": [
+                        {
+                            "tableName": "Speaker",
+                            "plural": "Speakers",
+                            "tableDescription": "",
+                            "columns": [
+                                {
+                                    "columnName": "Title",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "First",
+                                    "essential": true,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Middle",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Last",
+                                    "essential": true,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Suffix",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "PrimaryPhone",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Gender",
+                                    "essential": false,
+                                    "columnType": "EnumType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [
+                                        {
+                                            "enumValue": "Male",
+                                            "enumNumber": 0,
+                                            "enumDescription": "",
+                                            "colorValue": "",
+                                            "iconValue": "",
+                                            "enumSets": []
+                                        },
+                                        {
+                                            "enumValue": "Female",
+                                            "enumNumber": 0,
+                                            "enumDescription": "",
+                                            "colorValue": "",
+                                            "iconValue": "",
+                                            "enumSets": []
+                                        },
+                                        {
+                                            "enumValue": "Other",
+                                            "enumNumber": 0,
+                                            "enumDescription": "",
+                                            "colorValue": "",
+                                            "iconValue": "",
+                                            "enumSets": []
+                                        }
+                                    ],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "SecondaryPhone",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Street",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Street2",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "City",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "State",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "PostCode",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "County",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "PersonImage",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Country",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Email",
+                                    "essential": true,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "OrganizationName",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "OrganizationWebsite",
+                                    "essential": false,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                }
+                            ],
+                            "tables": []
+                        },
+                        {
+                            "tableName": "Track",
+                            "plural": "Tracks",
+                            "tableDescription": "",
+                            "columns": [
+                                {
+                                    "columnName": "Title",
+                                    "essential": true,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                }
+                            ],
+                            "tables": []
+                        },
+                        {
+                            "tableName": "Location",
+                            "plural": "Locations",
+                            "tableDescription": "",
+                            "columns": [
+                                {
+                                    "columnName": "Title",
+                                    "essential": true,
+                                    "columnType": "StringType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Latitude",
+                                    "essential": false,
+                                    "columnType": "DoubleType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                },
+                                {
+                                    "columnName": "Longitude",
+                                    "essential": false,
+                                    "columnType": "DoubleType",
+                                    "typeName": "",
+                                    "description": "",
+                                    "mockType": "",
+                                    "constraint": {
+                                        "minLength": 0,
+                                        "maxLength": 0,
+                                        "regularExpression": "",
+                                        "dataSource": ""
+                                    },
+                                    "enumSets": [],
+                                    "columns": []
+                                }
+                            ],
+                            "tables": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "records": [],
+    "apis": [],
+    "views": [],
+    "sections": [],
+    "snippets": [],
+    "folders": []
+}
