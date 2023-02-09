@@ -1,0 +1,32 @@
+[
+    {
+        "projectName": "CareManager",
+        "categoryType": "Other",
+        "projectDescription": "customizable software platform designed especially for the clinicians and health care professionals"
+    },
+    {
+        "projectName": "Conference",
+        "categoryType": "Other",
+        "projectDescription": "a mobile app to help attendees and meeting planners manage their conference experience"
+    },
+    {
+        "projectName": "ContactManager",
+        "categoryType": "Other",
+        "projectDescription": "manage your contacts in a better way"
+    },
+    {
+        "projectName": "Delivery",
+        "categoryType": "Shopping",
+        "projectDescription": "Food Delivery Application"
+    },
+    {
+        "projectName": "RecipeMaker",
+        "categoryType": "Other",
+        "projectDescription": "store your recipe and ingredients"
+    },
+    {
+        "projectName": "ShoppingApp",
+        "categoryType": "Shopping",
+        "projectDescription": "Create shopping apps for apparels, home appliances, furniture, outdoor camping essentials, and much more"
+    }
+]
